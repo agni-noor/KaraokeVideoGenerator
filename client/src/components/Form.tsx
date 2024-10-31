@@ -8,11 +8,19 @@ const Form = () => {
       lyrics: "",
       duration: "",
     });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(postData)
+    
+        // console.log(postData);
+      };
+    
   return (
 
     <Paper>
       <Box>
-        <form autoComplete="off" noValidate >
+        <form autoComplete="off" noValidate  onSubmit={handleSubmit}>
           <Box>
             <TextField
               name="lyrics"
